@@ -1,0 +1,53 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-radius: 5px;
+  background-color: #ffffff1d;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+.text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.todoIcon {
+  color: chartreuse;
+}
+.delete {
+  color: red;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+.check {
+  color: green;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  &:hover {
+    scale: 1.2;
+  }
+}
+.completedTodo {
+  background-color: unset;
+  border: 1px solid gray;
+  border-color: gray;
+  color: gray;
+}
+
+.todoItem.completedTodo .todoIcon,
+.todoItem.completedTodo .check,
+.todoItem.completedTodo .delete,
+.todoItem.completedTodo .text {
+  color: gray;
+  text-decoration: line-through;
+}
